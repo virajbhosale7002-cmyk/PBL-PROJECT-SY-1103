@@ -1,0 +1,13 @@
+
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport"
+# continued: content="width=device-width,initial-scale=1"><title>{{ title or 'MentorMentee' }}</title><link
+rel="stylesheet"
+# continued: href="{{ url_for('static',filename='style.css') }}"></head><body><header><div
+class="brand">MentorMentee</div>{%
+# continued: if session.get('user_id') %}<nav><a href="{{ url_for('dashboard') }}">Dashboard</a><a href="{{
+url_for('logout')
+# continued: }}">Logout</a></nav>{% endif %}</header><main>{% with messages=get_flashed_messages() %}{% if
+messages %}{% for
+# continued: m in messages %}<div class="notice">{{ m }}</div>{% endfor %}{% endif %}{% endwith %}{% block
+content %}{%
+# continued: endblock %}</main><footer>Mentor–Mentee Management System</footer></body></html>
