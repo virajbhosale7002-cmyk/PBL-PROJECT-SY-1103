@@ -1,0 +1,9 @@
+templates/listing.html
+{% extends 'base.html' %}{% block content %}<h1>{{ title }}</h1><section class="panel"><div
+# continued: class="table-wrap"><table><thead><tr>{% if rows %}{% for k in rows[0].keys() %}<th>{{ k.replace(
+'_',' ').title()
+# continued: }}</th>{% endfor %}{% else %}<th>Information</th>{% endif %}</tr></thead><tbody>{% for row in rows
+%}<tr>{% for
+# continued: val in row.values() %}<td>{{ val if val is not none else '' }}</td>{% endfor %}</tr>{% else
+%}<tr><td
+# continued: colspan="10">No records found.</td></tr>{% endfor %}</tbody></table></div></section>{% endblock %}
